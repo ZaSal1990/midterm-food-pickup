@@ -15,7 +15,7 @@ const cookieParser = require('cookie-parser');
 // PG database client/connection setup
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
-const db = new Pool({ connectionString: process.env.DATABASE_URI, ssl: true });
+const db = new Pool({ connectionString: process.env.DATABASE_URL, ssl: true });
 db.connect();
 
 //Twilio
